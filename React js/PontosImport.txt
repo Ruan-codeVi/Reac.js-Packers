@@ -1,0 +1,9 @@
+1º React js não é um framework e sim uma biblioteca baseada em 
+componentes.
+2º Tudo em React é componente, tudo que é criado utilizando React js vai ser componente
+
+O que são componentes em Javascript?
+São funções ou classes, sempre que tiver se tratantando em uma lib(biblioteca) baseada em componentes
+vai se tratar de uma função ou classe.
+
+Como funciona a 

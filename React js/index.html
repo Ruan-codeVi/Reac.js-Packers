@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando com React js</title>
+</head>
+<body>
+<div id="app"></div>
+ <!-- Injetando React com a forma de teste pratico -->
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!-- Ijetando os componentes react no html atraves da div  (id app é convenção) -->
+
+    <script>
+        function meuComponte(){ 
+                        //compone   prop   filho 
+          return  React.createElement('h1', null, 'Hello World')
+        }
+        // ReactDOM faz o papel de injetar componentes na pagina, é uma variave global
+        ReactDOM.render( // metodo render, que basicamente diz qual componente quer injetar e aonde
+        React.createElement(meuComponte), // o metodo React.creatElement(È a sintaxe para o react criar compomente) aceita normalmente três parâmetros mas pode-se passar mais que 3
+        // 1º parametro: é componente, 2º parametro: são propriedades, 3º filhos do compomente 
+        
+        //Ijetando de fato no elemento DOM div app
+        document.getElementById('app') 
+        )
+    </script>
+</body>
+</html>
