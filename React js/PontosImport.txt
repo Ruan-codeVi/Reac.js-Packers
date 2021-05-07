@@ -11,3 +11,8 @@ Para passar informção para os componentes é de cima para baixo.
 
 Desvantagem
 Que pode ficar muito custoso, imagina que tivesse um projeto grande onde há dezenas ou centenas de componentes(Pais, filhos, irmãos)
+tendo a tafera de propagar informações de cima para baixou ou de baixo pra cima.
+Seria inviavel.
+
+Como Resolver: Pra isso existem bibliotecas para resolver esse problema
+a lib mais famosa é CONTEXT API

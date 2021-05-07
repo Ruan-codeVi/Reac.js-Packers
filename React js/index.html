@@ -12,20 +12,46 @@
 <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 <!-- Ijetando os componentes react no html atraves da div  (id app é convenção) -->
-
-    <script>
-        function meuComponte(){ 
-                        //compone   prop   filho 
-          return  React.createElement('h1', null, 'Hello World')
-        }
-        // ReactDOM faz o papel de injetar componentes na pagina, é uma variave global
-        ReactDOM.render( // metodo render, que basicamente diz qual componente quer injetar e aonde
-        React.createElement(meuComponte), // o metodo React.creatElement(È a sintaxe para o react criar compomente) aceita normalmente três parâmetros mas pode-se passar mais que 3
-        // 1º parametro: é componente, 2º parametro: são propriedades, 3º filhos do compomente 
+<script>
+/* Propagando informações de forma tradicional 
+Propagando informação  em unico sentido */
+function meuCompenente1(){
+    return( 
+        React.createElement('div', null,
+        // o filho do componente div vai ser componente2
+        React.createElement(meuCompenente2))
         
-        //Ijetando de fato no elemento DOM div app
-        document.getElementById('app') 
-        )
-    </script>
+    )
+}
+function meuCompenente2(){
+    return( // chaves no return é para criar blocos de retorno
+        React.createElement('div', null,
+        React.createElement(meuCompenente3))  
+    ) 
+}
+function meuCompenente3(){
+    return( 
+    React.createElement('div', null,
+    React.createElement(meuCompenente4))    
+    )
+}
+function meuCompenente4(){
+    return( 
+        React.createElement('div', null,
+        React.createElement('p', null, 'componente 4'))   
+    )
+}
+function meuCompenente(){
+    //No react a função sempre tem que retornar o componente
+    return React.createElement('h1', null, 
+    React.createElement(meuCompenente1) //criando um encadeamento de componentes
+    )
+}
+ReactDOM.render(
+  React.createElement(meuCompenente),
+    document.querySelector('#app')
+)
+</script>
+   
 </body>
 </html>
