@@ -6,4 +6,8 @@ O que são componentes em Javascript?
 São funções ou classes, sempre que tiver se tratantando em uma lib(biblioteca) baseada em componentes
 vai se tratar de uma função ou classe.
 
-Como funciona a 
+* React trabalha com unico sentido chamado de  One-way data flow ou One-way binding.
+Para passar informção para os componentes é de cima para baixo.
+
+Desvantagem
+Que pode ficar muito custoso, imagina que tivesse um projeto grande onde há dezenas ou centenas de componentes(Pais, filhos, irmãos)
