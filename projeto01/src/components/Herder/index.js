@@ -1,12 +1,12 @@
 import React from 'react';
-import {AreaHeader} from './style'
+import {AreaHeader} from './styled'
 // Componente
 function Header(){
 return( 
         <AreaHeader>
             <div className = "conteiner">
                 <div className = "logo">
-                LogoMarca
+                <img src="../../../logo.jpg"></img>
                 </div>
                 <nav>
                     <ul>

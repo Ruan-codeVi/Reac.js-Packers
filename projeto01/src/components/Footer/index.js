@@ -1,10 +1,11 @@
 import React from 'react';
+import {AreaFooter} from './styled';
 //Criando Componente
 function Footer(){
  return( 
- <>
-  Todos os direitos reservados
-  </>  
+   <AreaFooter>
+     Todos os direitos reservados
+   </AreaFooter>
   );
 }
 
