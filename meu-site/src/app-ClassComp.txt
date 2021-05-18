@@ -1,0 +1,50 @@
+import React, { Component } from "react";
+
+
+// Props:São atributos que podem ser passados
+// Criando um componente do tipo Class component
+class Equipe extends Component{ // a classe sempre vai extender de Component
+    render(){ //metodo render que sempre possui o return para poder escrever o jsx
+        return(
+            <div>
+               <Sobre nome={this.props.nome} cargo={this.props.cargo}
+               idade={this.props.idade}/>
+               <Social fb={this.props.facebook} lkd={this.props.linkedin}/>
+               <hr/>
+            </div>
+        );
+    }
+}
+class Sobre extends Component{
+    render(){
+        return(
+            <div>
+                <h2> Olá sou o(a) {this.props.nome}</h2>
+                <h3>Cargo: {this.props.cargo}</h3>
+                <h4>Tenho {this.props.idade}</h4>
+            </div>
+        );
+    }
+}
+//component static
+const Social = (props)=>{
+    return(
+        <div>
+            <a href="{props.fb}">Facebook </a>
+            <a href="{props.lkd}">Linkedin </a>
+        </div>
+    );
+}
+//Componente principal
+function App(){
+    return(
+        <div>
+            <hi>Conheça nossa equipe:</hi>
+            <Equipe nome="Lucas" cargo="Programador" idade="22"/>
+            <Equipe nome="Jhonny B. Good" cargo="Designer" idade="16"
+            facebook="htpps://www.google.com" linkedin ="htpps://www.google.com"/>
+        </div>
+    );
+}
+
+export default App;

@@ -1,0 +1,54 @@
+import React from 'react';
+
+// Props:São atributos que podem ser passados
+// Criando um componente do tipo STATIC COMPONENT
+
+const Equipe = (props)=>{ //componente equipe
+    return(
+        <div> 
+            {/* Recebemdo as propriedade dentro de chaves {} */}
+            <Sobre username={props.nome} funcao={props.cargo} idade={props.idade}/>
+            <Midiasocial fb={props.facebook} lkd={props.linkedin} ytb={props.youtube}/>
+            <hr/> {/* TAG qie traça uma linha divisória */}
+        </div>
+        
+    );
+}
+// Criando um componente pra tratar só das informações
+const Sobre = (props)=>{
+    return(
+        <div>
+        <h2>Olá sou o(a) {props.username}</h2>
+        <h3>Cargo: {props.funcao}</h3>
+        <h4>Idade: {props.idade} anos</h4>
+        </div>
+    );
+}
+// Componente da midias sociais
+const Midiasocial = function(props){
+    return(
+        <div>
+            <a href="{props.fb}">Facebook  </a>
+            <a href="{props.lkd}">Linkedin </a>
+            <a href="{props.ytb}">Youtube </a>
+        </div>
+    );
+} 
+
+//Componente principal
+function App(){
+    return(
+        <div>
+            <hi>Conheça nossa equipe:</hi>
+            {/* Criando o componente Equipe passando propriedades */}
+            <Equipe nome="Juan" cargo="Programador" idade="28" 
+            facebook="https://www.facebook.com" linkedin="https://br.linkedin.com"
+            youtube="https://www.youtube.com"/>
+            <Equipe nome="Lucas" cargo="Designer" idade="18"
+            facebook="https://www.facebook.com" linkedin="https://br.linkedin.com"
+            youtube="https://www.youtube.com"/>
+        </div>
+    );
+}
+
+export default App;
